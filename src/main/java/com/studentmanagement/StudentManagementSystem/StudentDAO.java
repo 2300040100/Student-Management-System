@@ -98,5 +98,29 @@ public class StudentDAO {
             e.printStackTrace();
         }
     }
+    // SEARCH Operation - Search Student by Name
+    public static void searchStudent(String name) {
+        String query = "SELECT * FROM students WHERE name LIKE ?";
+        try (Connection con = DBConnection.getConnection();
+             PreparedStatement pst = con.prepareStatement(query)) {
+            pst.setString(1, "%" + name + "%");
+            ResultSet rs = pst.executeQuery();
+            boolean found = false;
+            while (rs.next()) {
+                found = true;
+                System.out.println("ID: " + rs.getInt("id"));
+                System.out.println("Name: " + rs.getString("name"));
+                System.out.println("Age: " + rs.getInt("age"));
+                System.out.println("Email: " + rs.getString("email"));
+                System.out.println("Department: " + rs.getString("department"));
+                System.out.println("---------------------------");
+            }
+            if (!found) {
+                System.out.println("No student found with name: " + name);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

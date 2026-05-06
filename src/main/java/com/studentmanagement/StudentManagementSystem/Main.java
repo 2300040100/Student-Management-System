@@ -15,6 +15,7 @@ public class Main {
             System.out.println("3. Update Student");
             System.out.println("4. Delete Student");
             System.out.println("5. Exit");
+            System.out.println("6. Search Student");
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -71,6 +72,12 @@ public class Main {
 
                 case 5:
                     System.out.println("Exiting...");
+                    break;
+                
+                case 6:
+                    System.out.print("Enter Name to Search: ");
+                    String searchName = scanner.next();
+                    StudentDAO.searchStudent(searchName);
                     break;
 
                 default:
