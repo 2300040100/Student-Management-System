@@ -1,20 +1,6 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/678ff218-5140-4b8c-9b6f-71f83de23d9d" /># Student Management System
+# Student Management System
 
 A Java-based Student Management System with GUI using Java Swing and MySQL.
-
-## Screenshots
- Search By Name:
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d97b794b-52d1-41cf-a766-83afb61fe01e" />
- Add Student:
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f4d8667f-123d-41f4-999d-81782c28dacb" />
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4e39ae05-995e-4e44-a959-fb9f3d47ab20" />
- Update Student:
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a3a51323-f709-45e0-b94f-ccdca8a214a8" />
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aa0ed549-ffdc-4a32-87d4-09d83e05f1da" />
-
- Delete Student:
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b7faed37-696a-41ee-83ae-0b6a6eea577d" />
- <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e693319-e0c9-4ee8-b253-1950f67a8bdd" />
 
 ## Features
 - Add new students
@@ -59,6 +45,34 @@ CREATE TABLE students (
     department VARCHAR(100)
 );
 \```
+
+
+## Screenshots
+
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/678ff218-5140-4b8c-9b6f-71f83de23d9d" />
+ 
+ Search By Name:
+
+ 
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d97b794b-52d1-41cf-a766-83afb61fe01e" />
+
+ 
+ Add Student:
+ 
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f4d8667f-123d-41f4-999d-81782c28dacb" />
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4e39ae05-995e-4e44-a959-fb9f3d47ab20" />
+
+ 
+ Update Student:
+ 
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a3a51323-f709-45e0-b94f-ccdca8a214a8" />
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/aa0ed549-ffdc-4a32-87d4-09d83e05f1da" />
+
+
+ Delete Student:
+ 
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b7faed37-696a-41ee-83ae-0b6a6eea577d" />
+ <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0e693319-e0c9-4ee8-b253-1950f67a8bdd" />
 
 ## How to Run
 1. Clone this repository
