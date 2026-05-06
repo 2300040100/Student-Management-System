@@ -122,5 +122,52 @@ public class StudentDAO {
             e.printStackTrace();
         }
     }
+    // SEARCH by Department
+    public static void searchByDepartment(String department) {
+        String query = "SELECT * FROM students WHERE department LIKE ?";
+        try (Connection con = DBConnection.getConnection();
+             PreparedStatement pst = con.prepareStatement(query)) {
+            pst.setString(1, "%" + department + "%");
+            ResultSet rs = pst.executeQuery();
+            boolean found = false;
+            while (rs.next()) {
+                found = true;
+                System.out.println("ID: " + rs.getInt("id"));
+                System.out.println("Name: " + rs.getString("name"));
+                System.out.println("Age: " + rs.getInt("age"));
+                System.out.println("Email: " + rs.getString("email"));
+                System.out.println("Department: " + rs.getString("department"));
+                System.out.println("---------------------------");
+            }
+            if (!found) {
+                System.out.println("No students found in department: " + department);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+ // VIEW students sorted by name
+    public static void getStudentsSortedByName() {
+        String query = "SELECT * FROM students ORDER BY name ASC";
+        try (Connection con = DBConnection.getConnection();
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery(query)) {
+            boolean found = false;
+            while (rs.next()) {
+                found = true;
+                System.out.println("ID: " + rs.getInt("id"));
+                System.out.println("Name: " + rs.getString("name"));
+                System.out.println("Age: " + rs.getInt("age"));
+                System.out.println("Email: " + rs.getString("email"));
+                System.out.println("Department: " + rs.getString("department"));
+                System.out.println("---------------------------");
+            }
+            if (!found) {
+                System.out.println("No students found.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
